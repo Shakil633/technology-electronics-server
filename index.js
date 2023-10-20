@@ -111,10 +111,20 @@ async function run() {
       res.send(result);
     });
 
+
+//jhdfhhhhajkfhdbvhnfb dhfhf
+
+//jhfkjdsfhdsbhbdfldzhbl
+//jhvfkdjfghbhjd fn 
+//kjshsjyegoa
+//gashbdfhr
+
+
+
+
     // user dataCollection
     app.post("/userData", async (req, res) => {
       const user = req.body;
-      console.log(user);
       const result = await userCollectionData.insertOne(user);
       res.send(result);
     });
