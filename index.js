@@ -111,17 +111,6 @@ async function run() {
       res.send(result);
     });
 
-
-
-
-
-
-//kjshsjyegoa
-//gashbdfhr
-
-
-
-
     // user dataCollection
     app.post("/userData", async (req, res) => {
       const user = req.body;
