@@ -23,7 +23,8 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    
+    // await client.connect();
     const brandNameCollection = client.db("brandDB").collection("brand");
     const brandProductsCollection = client.db("brandDB").collection("Products");
 
@@ -94,6 +95,8 @@ async function run() {
           rating: updateData.rating,
           description: updateData.description,
         },
+
+        // name, image, bandName, category, price, rating, description
       };
       const result = await brandProductsCollection.updateOne(
         filter,
@@ -135,7 +138,8 @@ async function run() {
     });
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+
+    // await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
